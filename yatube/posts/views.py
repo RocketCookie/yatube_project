@@ -2,7 +2,6 @@ from django.shortcuts import get_object_or_404, render
 from .models import Post, Group
 
 
-# Create your views here.
 def index(request):
     posts = Post.objects.order_by('-pub_date')[:10]
     context = {
